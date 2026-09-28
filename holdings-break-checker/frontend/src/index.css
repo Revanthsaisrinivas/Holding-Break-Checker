@@ -1,0 +1,53 @@
+:root {
+  --ink: #182430;
+  --ink-soft: #5b6472;
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --border: #dde1e6;
+  --accent: #235347;
+  --accent-soft: #e7efec;
+  --high: #9b2c2c;
+  --high-bg: #f7e6e6;
+  --medium: #92620a;
+  --medium-bg: #f7edd9;
+  --low: #2f6846;
+  --low-bg: #e5f0e8;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+button {
+  font-family: inherit;
+}
+
+select,
+input {
+  font-family: inherit;
+  font-size: 14px;
+}

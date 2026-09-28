@@ -1,0 +1,371 @@
+.app-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px 64px;
+}
+
+/* ---------- Header ---------- */
+
+.app-header {
+  padding: 36px 0 24px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+}
+
+.app-subtitle {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---------- Upload strip ---------- */
+
+.upload-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 20px 24px;
+}
+
+.upload-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 220px;
+}
+
+.upload-field label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.upload-field input[type='file'] {
+  font-size: 13.5px;
+}
+
+.upload-filename {
+  font-size: 12px;
+  color: var(--accent);
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.run-note {
+  margin: -4px 0 0;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.12s ease, border-color 0.12s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #1b4238;
+}
+
+.btn-secondary {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--ink);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Summary strip ---------- */
+
+.summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.summary-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 22px;
+  border-right: 1px solid var(--border);
+}
+
+.summary-stat:last-child {
+  border-right: none;
+}
+
+.summary-value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.summary-label {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+}
+
+.tone-high .summary-value {
+  color: var(--high);
+}
+
+.tone-medium .summary-value {
+  color: var(--medium);
+}
+
+.tone-low .summary-value {
+  color: var(--low);
+}
+
+/* ---------- Filter bar ---------- */
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 4px 2px;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 170px;
+}
+
+.filter-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.filter-field select {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+/* ---------- Table panel ---------- */
+
+.table-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.table-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.exception-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  min-width: 960px;
+}
+
+.exception-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  text-align: left;
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.exception-table th.num,
+.exception-table td.num {
+  text-align: right;
+}
+
+.exception-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.exception-table td.suggested-check {
+  white-space: normal;
+  min-width: 220px;
+  color: var(--ink-soft);
+}
+
+.exception-table tbody tr {
+  border-left: 3px solid transparent;
+}
+
+.row-severity-high {
+  border-left-color: var(--high);
+}
+
+.row-severity-medium {
+  border-left-color: var(--medium);
+}
+
+.row-severity-low {
+  border-left-color: var(--low);
+}
+
+.exception-table tbody tr:hover {
+  background: #fafbfc;
+}
+
+/* ---------- Badges ---------- */
+
+.badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.severity-high {
+  background: var(--high-bg);
+  color: var(--high);
+}
+
+.severity-medium {
+  background: var(--medium-bg);
+  color: var(--medium);
+}
+
+.severity-low {
+  background: var(--low-bg);
+  color: var(--low);
+}
+
+.status-select {
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--surface);
+  font-size: 13px;
+}
+
+/* ---------- States ---------- */
+
+.loading-state,
+.empty-state {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.empty-state p {
+  margin: 0 0 6px;
+}
+
+.empty-state-sub {
+  font-size: 13px;
+}
+
+.error-banner {
+  background: var(--high-bg);
+  color: var(--high);
+  border: 1px solid var(--high);
+  border-radius: 6px;
+  padding: 12px 18px;
+  font-size: 13.5px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 720px) {
+  .app-shell {
+    padding: 0 16px 48px;
+  }
+
+  .summary-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .summary-stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .summary-stat:nth-child(odd) {
+    border-right: 1px solid var(--border);
+  }
+
+  .summary-stat {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .summary-stat:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+}
